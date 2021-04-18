@@ -1,13 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import GlobalStyle from "./GlobalStyle"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import MainContent from "./components/MainContent"
+import { Header } from "./components/Header"
+import { Footer } from "./components/Footer"
+import { MainContent } from "./components/MainContent"
 import { BrowserRouter } from "react-router-dom"
 import { HolyGrailLayout } from "./components/HolyGrailLayout"
-import { LoadingOverlayProvider } from "./containers/LoadingOverlayProvider"
-import { AuthenticatedUserProvider } from "./containers/AuthenticatedUserProvider"
+// import { LoadingOverlayProvider } from "./containers/LoadingOverlayProvider"
+// import { AuthenticatedUserProvider } from "./containers/AuthenticatedUserProvider"
 
 export const App = () => {
 	const Background = styled.div`
@@ -43,7 +42,6 @@ export const App = () => {
 					</AuthenticatedUserProvider>
 				</LoadingOverlayProvider>
 			</AppWrapper>
-			<GlobalStyle />
 		</Background>
 	)
 }
