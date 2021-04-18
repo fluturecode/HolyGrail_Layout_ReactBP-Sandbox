@@ -5,15 +5,11 @@ import { Footer } from "./components/Footer"
 import { MainContent } from "./components/MainContent"
 import { BrowserRouter } from "react-router-dom"
 import { HolyGrailLayout } from "./components/HolyGrailLayout"
-// import { LoadingOverlayProvider } from "./containers/LoadingOverlayProvider"
-// import { AuthenticatedUserProvider } from "./containers/AuthenticatedUserProvider"
 
 export const App = () => {
 	const AppWrapper = styled.div`
 		min-height: 100vh;
-		margin-left: 15%;
-		margin-right: 15%;
-		font-family: "Optima", serif;
+		font-family: "Helvetica";
 		background-color: #eee;
 		@media (max-width: 768px) {
 			margin-left: 0%;
@@ -23,8 +19,6 @@ export const App = () => {
 
 	return (
 		<AppWrapper>
-			{/* <LoadingOverlayProvider>
-					<AuthenticatedUserProvider> */}
 			<BrowserRouter>
 				<HolyGrailLayout
 					header={<Header />}
@@ -32,8 +26,6 @@ export const App = () => {
 					footer={<Footer />}
 				/>
 			</BrowserRouter>
-			{/* </AuthenticatedUserProvider>
-				</LoadingOverlayProvider> */}
 		</AppWrapper>
 	)
 }

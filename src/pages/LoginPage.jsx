@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
-// import { Context as AuthContext } from "../context/auth.context"
 
 const LoginWrapper = styled.div`
 	display: grid;
@@ -29,8 +28,6 @@ const LoginFormBox = styled.div`
 	z-index: 2;
 `
 export const LoginPage = () => {
-	// const { loginUser } = useContext(AuthContext)
-
 	return (
 		<LoginWrapper>
 			<LoginGrid>
