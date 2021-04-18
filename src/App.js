@@ -9,12 +9,6 @@ import { HolyGrailLayout } from "./components/HolyGrailLayout"
 // import { AuthenticatedUserProvider } from "./containers/AuthenticatedUserProvider"
 
 export const App = () => {
-	const Background = styled.div`
-		background: #7a5114;
-		min-height: 100vh;
-		width: 100%;
-	`
-
 	const AppWrapper = styled.div`
 		min-height: 100vh;
 		margin-left: 15%;
@@ -28,20 +22,18 @@ export const App = () => {
 	`
 
 	return (
-		<Background>
-			<AppWrapper className='app'>
-				{/* <LoadingOverlayProvider>
+		<AppWrapper>
+			{/* <LoadingOverlayProvider>
 					<AuthenticatedUserProvider> */}
-				<BrowserRouter>
-					<HolyGrailLayout
-						header={<Header />}
-						mainContent={<MainContent />}
-						footer={<Footer />}
-					/>
-				</BrowserRouter>
-				{/* </AuthenticatedUserProvider>
+			<BrowserRouter>
+				<HolyGrailLayout
+					header={<Header />}
+					mainContent={<MainContent />}
+					footer={<Footer />}
+				/>
+			</BrowserRouter>
+			{/* </AuthenticatedUserProvider>
 				</LoadingOverlayProvider> */}
-			</AppWrapper>
-		</Background>
+		</AppWrapper>
 	)
 }
