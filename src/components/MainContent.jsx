@@ -1,6 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { Switch, Route, Redirect } from "react-router-dom"
+import { HomePage } from "../pages/HomePage"
+import { LoginPage } from "../pages/LoginPage"
+import { ResetPasswordPage } from "../pages/ResetPasswordPage"
 
 const MainWrapper = styled.div`
 	display: flex;
@@ -16,24 +19,13 @@ export const MainContent = () => {
 	return (
 		<MainWrapper>
 			<Switch>
-				<Route exact path='/agent-list'>
-					<Directory />
-				</Route>
-				<Route exact path='/view-orders'>
-					<OrderList />
-				</Route>
-				<Route exact path='/login'>
-					<LoginPage />
-				</Route>
-				<Route exact path='/logout'>
-					<LogoutPage />
-				</Route>
-				<Route exact path='/'>
-					<Redirect to='/view-orders' />
-				</Route>
-				<Route path='/'>
-					<NotFound />
-				</Route>
+				<Route path='/' component={HomePage} />
+				<Route exact path='/auth/login' component={LoginPage} />
+				<Route
+					exact
+					path='/auth/forgot-password'
+					component={ResetPasswordPage}
+				/>
 			</Switch>
 		</MainWrapper>
 	)

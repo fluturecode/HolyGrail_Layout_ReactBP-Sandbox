@@ -30,17 +30,17 @@ export const App = () => {
 	return (
 		<Background>
 			<AppWrapper className='app'>
-				<LoadingOverlayProvider>
-					<AuthenticatedUserProvider>
-						<BrowserRouter>
-							<HolyGrailLayout
-								header={<Header />}
-								mainContent={<MainContent />}
-								footer={<Footer />}
-							/>
-						</BrowserRouter>
-					</AuthenticatedUserProvider>
-				</LoadingOverlayProvider>
+				{/* <LoadingOverlayProvider>
+					<AuthenticatedUserProvider> */}
+				<BrowserRouter>
+					<HolyGrailLayout
+						header={<Header />}
+						mainContent={<MainContent />}
+						footer={<Footer />}
+					/>
+				</BrowserRouter>
+				{/* </AuthenticatedUserProvider>
+				</LoadingOverlayProvider> */}
 			</AppWrapper>
 		</Background>
 	)
