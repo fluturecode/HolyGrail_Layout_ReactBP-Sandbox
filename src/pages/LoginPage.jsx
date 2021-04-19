@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { LoginForm } from "../components/LoginForm"
 
-const ContentWrapper = styled.div`
-	background-color: #175f6e;
+const LoginWrapper = styled.div`
+	/* background-color: #175f6e; */
 `
 
 const LoginGrid = styled.main``
@@ -15,15 +15,14 @@ const LoginFormBox = styled.div``
 
 export const LoginPage = () => {
 	return (
-		<ContentWrapper>
-			<LoginForm />
-			{/* <LoginGrid>
+		<LoginWrapper>
+			<LoginGrid>
 				<LoginFormContainer>
 					<LoginFormBox />
 					<LoginForm />
 					<Link to='/auth/forgot-password'>Forgot Password?</Link>
 				</LoginFormContainer>
-			</LoginGrid> */}
-		</ContentWrapper>
+			</LoginGrid>
+		</LoginWrapper>
 	)
 }
