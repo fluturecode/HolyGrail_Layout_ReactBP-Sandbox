@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Header } from "./Header"
 
 const HolyGrailWrapper = styled.div`
 	display: flex;
@@ -41,7 +42,9 @@ const HolyGrailFooter = styled.footer`
 export const HolyGrailLayout = () => (
 	<HolyGrailWrapper>
 		<HolyGrailHeader>
-			<h1>Header</h1>
+			<Header>
+				<h1>Header</h1>
+			</Header>
 		</HolyGrailHeader>
 		<HolyGrailLeftNav>Side Nav</HolyGrailLeftNav>
 		<HolyGrailMain>Main Content</HolyGrailMain>

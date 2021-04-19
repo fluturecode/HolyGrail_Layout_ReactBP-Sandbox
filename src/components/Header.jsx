@@ -11,6 +11,7 @@ const HeaderWrapper = styled.div`
 export const Header = () => {
 	return (
 		<HeaderWrapper>
+			NavBar
 			<NavBar />
 		</HeaderWrapper>
 	)
