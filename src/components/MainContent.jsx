@@ -7,8 +7,8 @@ import { ResetPasswordPage } from "../pages/ResetPasswordPage"
 
 const MainWrapper = styled.div`
 	display: flex;
-	flex: 1 1;
-	border: 2px solid green;
+	height: 100vh;
+	border: 2px solid red;
 	padding: 2vh 10vw;
 	@media (max-width: 768px) {
 		width: 100%;

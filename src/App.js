@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { MainContent } from "./components/MainContent"
 import { BrowserRouter } from "react-router-dom"
 import { HolyGrailLayout } from "./components/HolyGrailLayout"
+import { NavBar } from "./components/Navbar"
 
 export const App = () => {
 	const AppWrapper = styled.div`
@@ -21,7 +21,7 @@ export const App = () => {
 		<AppWrapper>
 			<BrowserRouter>
 				<HolyGrailLayout
-					header={<Header />}
+					leftSidebar={<NavBar />}
 					mainContent={<MainContent />}
 					footer={<Footer />}
 				/>

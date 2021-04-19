@@ -10,10 +10,6 @@ const HolyGrailWrapper = styled.div`
 		flex-wrap: wrap;
 	}
 `
-const HolyGrailHeader = styled.header`
-	border: 2px solid green;
-	width: 100%;
-`
 const HolyGrailMain = styled.main`
 	border: 2px solid blue;
 	@media all and (min-width: 768px) {
@@ -35,14 +31,8 @@ const HolyGrailFooter = styled.footer`
 	order: 4;
 `
 
-export const HolyGrailLayout = ({
-	header,
-	leftSidebar,
-	mainContent,
-	footer,
-}) => (
+export const HolyGrailLayout = ({ leftSidebar, mainContent, footer }) => (
 	<HolyGrailWrapper>
-		{!!header && <HolyGrailHeader>{header}</HolyGrailHeader>}
 		{!!mainContent && <HolyGrailMain>{mainContent}</HolyGrailMain>}
 		{!!leftSidebar && <HolyGrailNav>{leftSidebar}</HolyGrailNav>}
 		{!!footer && <HolyGrailFooter>{footer}</HolyGrailFooter>}
