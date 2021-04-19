@@ -20,7 +20,7 @@ export const MainContent = () => {
 	return (
 		<MainWrapper>
 			<Switch>
-				<Route path='/' component={HomePage} />
+				<Route exact path='/' component={HomePage} />
 				<Route exact path='/auth/login' component={LoginPage} />
 				<Route
 					exact

@@ -1,7 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Header } from "./Header"
-import { NavBar } from "./Navbar"
 
 const HolyGrailWrapper = styled.div`
 	display: flex;
