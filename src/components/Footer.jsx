@@ -19,7 +19,7 @@ const copyrightDate = () => {
 export const Footer = () => {
 	return (
 		<FooterWrapper>
-			<span>&copy; Bitwise Technology Constulting - v0.1.0 Staging</span>
+			<span>&copy; Bitwise Technology Constulting - v0.1.0 Staging </span>
 			{copyrightDate()}
 		</FooterWrapper>
 	)

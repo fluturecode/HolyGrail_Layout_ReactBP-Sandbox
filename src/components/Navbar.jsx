@@ -5,8 +5,7 @@ const NavBarWrapper = styled.div`
 	width: 100%;
 	background-color: grey;
 	display: flex;
-	flex-direction: row;
-	flex: 1 1;
+	flex-direction: column;
 `
 
 const StyledNavLink = styled(NavLink)`

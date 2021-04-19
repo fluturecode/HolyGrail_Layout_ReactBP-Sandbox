@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Header } from "./Header"
+import { NavBar } from "./Navbar"
 
 const HolyGrailWrapper = styled.div`
 	display: flex;
@@ -11,7 +12,6 @@ const HolyGrailWrapper = styled.div`
 		flex-wrap: wrap;
 	}
 `
-
 const HolyGrailHeader = styled.header`
 	border: 2px solid green;
 	width: 100%;
@@ -24,32 +24,29 @@ const HolyGrailMain = styled.main`
 		min-height: 80vh;
 	}
 `
-
-const HolyGrailLeftNav = styled.aside`
-	border: 2px solid red;
+const HolyGrailNav = styled.aside`
+	border: 2px solid;
 	@media all and (min-width: 768px) {
 		order: 1;
 		flex: 1;
 	}
 `
-
 const HolyGrailFooter = styled.footer`
 	border: 2px solid gray;
 	width: 100%;
 	order: 4;
 `
 
-export const HolyGrailLayout = () => (
+export const HolyGrailLayout = ({
+	header,
+	leftSidebar,
+	mainContent,
+	footer,
+}) => (
 	<HolyGrailWrapper>
-		<HolyGrailHeader>
-			<Header>
-				<h1>Header</h1>
-			</Header>
-		</HolyGrailHeader>
-		<HolyGrailLeftNav>Side Nav</HolyGrailLeftNav>
-		<HolyGrailMain>Main Content</HolyGrailMain>
-		<HolyGrailFooter>
-			<h2>Footer</h2>
-		</HolyGrailFooter>
+		{!!header && <HolyGrailHeader>{header}</HolyGrailHeader>}
+		{!!mainContent && <HolyGrailMain>{mainContent}</HolyGrailMain>}
+		{!!leftSidebar && <HolyGrailNav>{leftSidebar}</HolyGrailNav>}
+		{!!footer && <HolyGrailFooter>{footer}</HolyGrailFooter>}
 	</HolyGrailWrapper>
 )
